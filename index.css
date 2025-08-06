@@ -1,4 +1,128 @@
-html, body {
+body {
+    display: grid;
     margin: 0;
     padding: 0;
+    background-color: whitesmoke;
+    font-family: "Cabin Sketch", sans-serif;
+}
+
+#page-title {
+    display: flex;
+    justify-items: center;
+    margin: auto;
+    background: linear-gradient(25deg, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2b, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d4ff, #0af, #007fff, #05f, #002bff, #00f, #2a00ff, #50f, #7f00ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 800;
+    text-shadow: 1px 1px darkgrey;
+    border-bottom: 5px solid black;
+
+}
+
+/* Styling for the color selection form at the top */
+.color-selection-form {
+    display: flex;
+    font-family: "Cabin Sketch", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1rem;
+}
+
+.color-picker-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.color-display {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+#color-palette-select {
+    display: flex;
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 2rem;
+    height: 4rem;
+    width: 600px;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: var(--secondary-background);
+    color: var(--text-color-dark);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+}
+
+#color-palette-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5);
+}
+
+.submit-button {
+
+    background-color: #ff2b00;
+    color: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #3a7bd5;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    .color-selection-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .color-picker-group {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #color-palette-select {
+        flex-grow: 1;
+        width: auto;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
 }
