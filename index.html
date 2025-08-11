@@ -8,25 +8,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
-    <title>Personal Palatte Picker</title>
+    <title>Personal Palette Picker</title>
 </head>
 
 <body>
     <h1 id="page-title">Personal Palette Picker</h1>
     <form class="color-selection-form">
-        <label for="color-palette-select" class="visually-hidden">Select a Color</label>
-        <div class="color-picker-group">
-            <span class="color-display" style="background-color: #4a90e2;"></span>
-            <select name="color-palette" id="color-palette-select">
-                <option value="#4a90e2">Blue</option>
-                <option value="#667eea">Purple</option>
-                <option value="#e0e0e0">Light Gray</option>
+        <div class="input-group">
+            <label for="color-palette-select" class="visually-hidden">Select a Color</label>
+            <div class="color-picker-group">
+                <span id="color-display"></span>
+                <select name="color-palette" id="color-palette-select">
+                    <option value="#040272">Blue</option>
+                    <option value="#673ab7">Purple</option>
+                    <option value="#e0e0e0">Light Gray</option>
+                    <option value="#28a745">Green</option>
+                    <option value="#dc3545">Red</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="scheme-mode-select" class="visually-hidden">Select Scheme Mode</label>
+            <select name="scheme-mode" id="scheme-mode-select">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic" selected>Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option>
             </select>
         </div>
-        <button type="submit" class="submit-button">Apply Color</button>
+
+        <button type="submit" class="submit-button" id="submit-button">Get Color Scheme</button>
     </form>
+    <div id="display-palette">
     </div>
-    </header>
 
     <script src="index.js"></script>
 </body>
